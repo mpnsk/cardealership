@@ -50,7 +50,7 @@ public class cisCDapp
                             break;
                         }
                     }
-                    if (index < 0 || index > 10){
+                    if (index < 1 || index > 10){
                         System.out.println("Please enter a number between 1 and 10. ie: \"Select 7\"");
                         break;
                     }
