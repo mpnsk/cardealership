@@ -24,7 +24,7 @@ public class Car {
     private Interior interior;
     private Trunk trunk;
     private Option[] options;
-    ArrayList <Option> addopt;
+    ArrayList <Option> addopt = new ArrayList<>();
 
     public Car (String make, int year, String model, int price, String color, CarType type){
         this.make = make;
