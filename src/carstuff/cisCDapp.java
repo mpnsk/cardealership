@@ -41,7 +41,19 @@ public class cisCDapp
                     break;
                 case "Select":
                     int index;
-                    index = Integer.parseInt(parts[1]);
+                    try {
+                        index = Integer.parseInt(parts[1]);
+                    }catch (NumberFormatException e){
+                        if (parts[1].length()==1){
+                            index = parts[1].charAt(0)-'A'+1;
+                        }else {
+                            break;
+                        }
+                    }
+                    if (index < 0 || index > 10){
+                        System.out.println("Please enter a number between 1 and 10. ie: \"Select 7\"");
+                        break;
+                    }
                     String details = dealership.SelectCar(index);
                     System.out.println("This " + details + " is great! You can view engine, interior, and trunk of the car");
                     break;
